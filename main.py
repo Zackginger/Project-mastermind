@@ -7,7 +7,7 @@ def generer_masque():
     :return:
     """
     masque = []
-    lst_nbre = ["rose", "orange", "gris", "vert", "jaune", "blanc", "bleur", "rouge"]
+    lst_nbre = ["rose", "orange", "gris", "vert", "jaune", "blanc", "bleu", "rouge"]
     for i in range(3):
         print("Vos choix de couleur sont :",lst_nbre)
         chiffre = input(f"quelle est {i} couleur de la combinaison : ")
