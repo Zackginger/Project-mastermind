@@ -1,13 +1,14 @@
 
-
-
 #Abel
 def generer_masque():
     """
     Cette Fonction permet de générer le masque que le joueur devra deviner.
-    :return:
+    :return: masque, la combinaison cachée
     """
     masque = []
+    print("*" * 30)
+    print("Veuillez rentrer 4 couleurs un par un et ton ami essayera de deviner les couleurs rentrées!!")
+    print("*" * 30)
     lst_nbre = ["rose", "orange", "gris", "vert", "jaune", "blanc", "bleu", "rouge"]
     print("Vos choix de couleur sont :", lst_nbre)
 
@@ -21,13 +22,18 @@ def deviner_couleur():
     """
     Cette fonction permet au joueur de deviner les couleurs rentrer par l'utisateur.
     :return:
-
-    Pseudo-code(ish)
-    on demander au joueur de rentrer les couleurs rentrer par son ami(ou l'utilisateur)
-    on met ces couleurs dans une liste qui les enregistre.
     """
+    #Pseudo-code(ish)
+    #
+
+
     coul_deviner = []
     print("Il y a quatre couleurs qui sont rentré par ton ami!!!Essaie de les deviner en entrant un par un!!!")
+    print("*" * 30)
+    print("Il y a quatre couleurs qui sont rentrées par ton ami!!!Essaie de les deviner en entrant un par un les couleurs!!!")
+    print("*" * 30)
+    print("Bonne Chance!!")
+    print("*" * 30)
     for i in range(4):
         dev_coul = input(f"Quelle est la {i}e couleur de la combinaison?: ").strip().lower()
         coul_deviner.append(dev_coul)
@@ -55,50 +61,26 @@ def point(code:list,essai:list):
             faire condition pour vérifier si la couleur est mauvaise
 
     """
+    indice={}
+    white=0
+    black=0
+    null=0
 
-    correct=[
-        ["1"],
-        ["2"],
-        ["3"],
-        ["4"]
-    ]
-    code2=code.copy()
     for i in range(len(code)): # pour chaque couleur
         if essai[i] == code[i]: #vérifie la bonne couleur à la place
-            correct[i].append("white")
-            code2.pop(i)
-            code2.insert(i,"_")
-            break
-
-    for a in range(len(code)): #pour chaque couleur
-        if len(correct[a])==1: #vérifie si la couleur a déja un résultat
-            for b in range(len(code2)): #boucle pour  verifier chaque couleur dans la code initial
-                if essai[a] == code2[b] : #vérifie si la bonne couleur à la mauvaise place
-                    correct[a].append("black")
-                    break
-
-    for c in range(len(correct)): #pour chaque couleur
-        if len(correct[c]) == 1: #vérifie si la couleur a déja un résultat
-            correct[c].append("null") # fait que les couleur restant sont null
+            white+=1
+        elif essai[i] in code: #vérifie si la bonne couleur à la mauvaise place
+            black+=1
+        else:
+            null+=1# fait que les couleur restant sont null
 
     #pour conter les indices
-    indice={}
-    null=0
-    for d in range(4):
-        null+=correct[d].count("null")
-    black=0
-    for e in range(4):
-        black+=correct[e].count("black")
-    white=0
-    for f in range(4):
-        white+=correct[f].count("white")
+
     indice["white"]=white
     indice["black"]=black
     indice["null"]=null
 
     return indice
 
-cd=["bleu","vert","rouge","rose"]
-es=["vert","bleu","gris","orange"]
-print(point(cd,es))
+
 

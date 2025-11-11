@@ -1,7 +1,6 @@
 import pytest
 from module import *
 
-
 @pytest.mark.parametrize("code , essai , dictindice", [
                         (["rose","vert","bleu","rouge"],["vert","rose","gris","orange"],{"white":0,"black":2,"null":2}),
                         (["vert","vert","vert","vert"],["vert","vert","vert","vert"],{"white":4,"black":0,"null":0}),

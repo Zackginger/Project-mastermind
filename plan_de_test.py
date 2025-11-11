@@ -1,8 +1,8 @@
 """
 -Zackary Ritchie
 test de la fonction points
-| # | essayer de l'utilisateur | combinaison               | Résultat attendu       | Résultat obtenu     |
-|---|--------------------------|---------------------------|------------------------|---------------------|
+| # | essayer de l'utilisateur | combinaison            | Résultat attendu       | Résultat obtenu        |
+|---|--------------------------|------------------------|------------------------|------------------------|
 | 1 | rose,vert,bleu,rouge     | vert,rose,gris,orange  | white:0,black:2,null:2 | white:0,black:2,null:2 |
 | 2 | vert,vert,vert,vert      | vert,vert,vert,vert    | white:4,black:0,null:0 | white:4,black:0,null:0 |
 | 3 | rose,rose,rose,rose      | rouge,bleu,jaune,rouge | white:0,black:0,null:4 | white:0,black:0,null:4 |
