@@ -24,7 +24,16 @@ def deviner_couleur():
     :return:
     """
     #Pseudo-code(ish)
-    #
+    #Debut
+        #Initialiser liste coul_deviner comme vide
+        #Pour i allant de 0 à 3 faire
+            #Afficher "Quelle est la i-ème couleeur de la combinaison?
+            #Lire dev_coul
+            #Mettre dev_coul en minuscules et enlever les espaces
+            #Ajouter dev_coul à liste coul_deviner
+        #Fin Pour
+        #Retourner coul_deviner
+    #Fin
 
 
     coul_deviner = []
