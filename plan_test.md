@@ -1,6 +1,7 @@
--Zackary Ritchie
+Zackary Ritchie
 test de la fonction points
-| # | essayer de l'utilisateur | combinaison            | Résultat attendu       | Résultat obtenu        |
+
+| # | essayer de l'utilisateur | combinaison            | Résultat attendu       | Résultat observé       |
 |---|--------------------------|------------------------|------------------------|------------------------|
 | 1 | rose,vert,bleu,rouge     | vert,rose,gris,orange  | white:0,black:2,null:2 | white:0,black:2,null:2 |
 | 2 | vert,vert,vert,vert      | vert,vert,vert,vert    | white:4,black:0,null:0 | white:4,black:0,null:0 |
@@ -8,7 +9,23 @@ test de la fonction points
 | 4 | bleu,vert,bleu,vert      | vert,bleu,vert,bleu    | white:0,black:4,null:0 | white:0,black:4,null:0 |
 | 5 | bleu,bleu,rouge orange   | bleu,vert,orange,jaune | white:1,black:1,null:2 | white:1,black:1,null:2 |
 
+Uwumwami Peace Sammy/
+test de la fonction deviner_couleur
 
-- Uwumwami Peace Sammy
-- test de la fonction deviner_couleur
+| variable 1 | variable 2 | Résultat attendu   | Résultat observé   |
+|------------|------------|--------------------|--------------------|
+|            |            |                    |                    |
+|            |            |                    |                    |
 
+
+
+
+
+
+Abel Lopis
+test de la fonction generer_masque
+
+| variable 1 | variable 2 | Résultat attendu   | Résultat observé   |
+|------------|------------|--------------------|--------------------|
+|            |            |                    |                    |
+|            |            |                    |                    |

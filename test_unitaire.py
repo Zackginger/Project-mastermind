@@ -14,3 +14,18 @@ def testpoint(code,essai,dictindice):
     indices=point(code,essai)
 
     assert dictindice==indices
+
+@pytest.mark.parametrize("couleur", "resultat_attendu",[
+    ("rose", "rose"),
+    ("jaune", "Jaune"),
+    ("violet", "Entrez la couleur valide ou rentrez une couleur à la fois."),
+    ("2", "Entrez la couleur valide ou rentrez une couleur à la fois."),
+    ("jaune, vert, bleu", "Entrez la couleur valide ou rentrez une couleur à la fois."),
+    ("rouge,", "Entrez la couleur valide ou rentrez une couleur à la fois.")
+
+])
+def test_deviner_couleur(couleur, resultat_attendu):
+
+    couleur_obtenu = deviner_couleur()
+
+    assert couleur_obtenu == resultat_attendu
