@@ -13,7 +13,6 @@ def generer_masque():
     print("Vos choix de couleur sont :", lst_nbre)
     print("*" * 30)
     time.sleep(3)
-
     for i in range(4):
         while True:
             couleur = input(f"quelle est la {i}e couleur de la combinaison?: ").strip().lower()
@@ -56,7 +55,6 @@ def deviner_couleur():
     time.sleep(1)
     print("Bonne Chance!!")
     print("*" * 30)
-
     for i in range(4):
         dev_coul = input(f"Quelle est la {i}e couleur de la combinaison?: ").strip().lower()
         while True:
