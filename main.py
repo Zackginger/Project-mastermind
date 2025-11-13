@@ -8,7 +8,7 @@ print("L'un de vous 2 doit rentrer quatre couleurs un à un. L'autre personne de
 time.sleep(5)
 print("Voici la liste des couleurs que vous devez choisir: rose, orange, gris, vert, jaune, blanc, bleu, rouge")
 print("*" * 30)
-
+print("sfsdfsdfsd")
 combinaison = generer_masque()
 deviner_couleur = deviner_couleur()
 de = point(combinaison, deviner_couleur)
