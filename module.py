@@ -1,4 +1,4 @@
-
+import time
 #Abel
 def generer_masque():
     """
@@ -8,16 +8,27 @@ def generer_masque():
     masque = []
     print("*" * 30)
     print("Veuillez rentrer 4 couleurs un par un et ton ami essayera de deviner les couleurs rentrées!!")
-    print("*" * 30)
+    time.sleep(5)
     lst_nbre = ["rose", "orange", "gris", "vert", "jaune", "blanc", "bleu", "rouge"]
     print("Vos choix de couleur sont :", lst_nbre)
+    print("*" * 30)
+    time.sleep(3)
 
     for i in range(4):
-        couleur = input(f"quelle est la {i}e couleur de la combinaison?: ").strip().lower()
-        masque.append(couleur)
+        while True:
+            couleur = input(f"quelle est la {i}e couleur de la combinaison?: ").strip().lower()
+            if " " or "," or ";" in couleur:
+                print("Entre UNE seule couleur, pas plusieurs.")
+                continue
+            if couleur not in lst_nbre:
+                print("Entrer une couleur valide. La couleur doit être dans les choix de couleurs.")
+                continue
+            else:
+                masque.append(couleur)
+                break
     return masque
 
-
+#Sammy
 def deviner_couleur():
     """
     Cette fonction permet au joueur de deviner les couleurs rentrer par l'utisateur.
@@ -37,15 +48,27 @@ def deviner_couleur():
 
 
     coul_deviner = []
-    print("Il y a quatre couleurs qui sont rentré par ton ami!!!Essaie de les deviner en entrant un par un!!!")
+    lst_coul = ["rose", "orange", "gris", "vert", "jaune", "blanc", "bleu", "rouge"]
     print("*" * 30)
-    print("Il y a quatre couleurs qui sont rentrées par ton ami!!!Essaie de les deviner en entrant un par un les couleurs!!!")
+    print("Voici une liste de couleurs valides: rose, orange, gris, vert, jaune, blanc, bleu, rouge")
+    time.sleep(5)
+    print("Dans cette liste, il y a quatre couleurs qui sont rentré par ton ami!!!Essaie de les deviner en entrant un par un!!!")
     print("*" * 30)
+    time.sleep(1)
     print("Bonne Chance!!")
     print("*" * 30)
     for i in range(4):
         dev_coul = input(f"Quelle est la {i}e couleur de la combinaison?: ").strip().lower()
-        coul_deviner.append(dev_coul)
+        while True:
+            if " " or "," or ";" in dev_coul:
+                print("Entre UNE seule couleur, pas plusieurs.")
+                continue
+            if dev_coul not in lst_coul:
+                print("Entre la couleur valide. La couleur doit être dans la liste des couleurs.")
+                continue
+            else:
+                coul_deviner.append(dev_coul)
+                break
     return coul_deviner
 
 #Zackary Ritchie
