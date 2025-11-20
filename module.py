@@ -58,15 +58,15 @@ def deviner_couleur():
     lst_coul = ["rose", "orange", "gris", "vert", "jaune", "blanc", "bleu", "rouge"]
     print("*" * 30)
     print(f"Voici une liste de couleurs valides: {lst_coul}")
-    time.sleep(5)
+    time.sleep(3)
     print("Dans cette liste, il y a quatre couleurs qui sont rentré par ton ami!!!Essaie de les deviner en entrant un par un!!!")
     print("*" * 30)
     time.sleep(1)
     print("Bonne Chance!!")
     print("*" * 30)
     for i in range(4):
-        dev_coul = input(f"Quelle est la {i+1}e couleur de la combinaison?: ").strip().lower()
         while True:
+            dev_coul = input(f"Quelle est la {i+1}e couleur de la combinaison?: ").strip().lower()
             if dev_coul not in lst_coul:
                 print("Entrez la couleur valide ou rentrez une couleur à la fois.")
                 continue
@@ -102,10 +102,14 @@ def point(code:list,essai:list):
     black=0
     null=0
 
-    for i in range(len(code)): # pour chaque couleur
-        if essai[i] == code[i]: #vérifie la bonne couleur à la place
-            white+=1
-        elif essai[i] in code: #vérifie si la bonne couleur à la mauvaise place
+    code_2=code.copy()
+    for a in range(len(essai)):
+        if essai[a] == code[a]:  # vérifie la bonne couleur à la place
+            white += 1
+            code_2.remove(code[a])
+
+    for i in range(len(code_2)): # pour chaque couleur
+        if essai[i] in code_2: #vérifie si la bonne couleur à la mauvaise place
             black+=1
         else:
             null+=1# fait que les couleur restant sont null
@@ -119,4 +123,3 @@ def point(code:list,essai:list):
     return indice
 
 
-deviner_couleur()
