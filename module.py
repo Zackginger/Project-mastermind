@@ -58,10 +58,10 @@ def deviner_couleur():
     lst_coul = ["rose", "orange", "gris", "vert", "jaune", "blanc", "bleu", "rouge"]
     print("*" * 30)
     print(f"Voici une liste de couleurs valides: {lst_coul}")
-    time.sleep(3)
+    time.sleep(.5)
     print("Dans cette liste, il y a quatre couleurs qui sont rentré par ton ami!!!Essaie de les deviner en entrant un par un!!!")
     print("*" * 30)
-    time.sleep(1)
+    time.sleep(0.5)
     print("Bonne Chance!!")
     print("*" * 30)
     for i in range(4):
@@ -103,13 +103,15 @@ def point(code:list,essai:list):
     null=0
 
     code_2=code.copy()
+    essai_2=essai.copy()
     for a in range(len(essai)):
         if essai[a] == code[a]:  # vérifie la bonne couleur à la place
             white += 1
             code_2.remove(code[a])
+            essai_2.remove(code[a])
 
     for i in range(len(code_2)): # pour chaque couleur
-        if essai[i] in code_2: #vérifie si la bonne couleur à la mauvaise place
+        if essai_2[i] in code_2: #vérifie si la bonne couleur à la mauvaise place
             black+=1
         else:
             null+=1# fait que les couleur restant sont null

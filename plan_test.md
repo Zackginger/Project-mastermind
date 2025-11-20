@@ -12,20 +12,24 @@ test de la fonction points
 Uwumwami Peace Sammy/
 test de la fonction deviner_couleur
 
-| variable 1 | variable 2 | Résultat attendu   | Résultat observé   |
-|------------|------------|--------------------|--------------------|
-|            |            |                    |                    |
-|            |            |                    |                    |
-
-
-
-
+| # | Entré utilisateur simulé          | Résultat attendu                    | explication                           | 
+|---|-----------------------------------|-------------------------------------|---------------------------------------|
+| 1 | rose, bleu, jaune, vert           | ["rose", "bleu", "jaune", "vert"]   | couleurs enregistrées dans la liste   |
+| 2 | pomme -> rouge, bleu, vert, jaune | ["rouge", "bleu", "vert", "jaune"]  | on redemande pour la couleur          |
+| 3 | rouge, rouge, bleu, blanc         | ["rouge", "rouge", "bleu", "blanc"] | la couleur est enregistrer 2 fois     |
+| 4 | BLEU, vert, jaUne, Rouge          | ["bleu", "vert", "jaune", "rouge"]  | il y a la fonction lower              |
+| 5 | gris, , orange, bleu              | ["gris", ...?, "orange", "bleu"]    | on demande pour la couleur qui manque |
+| 6 | camion ->bleu, jaune, vert, rose  | ["bleu", "jaune", "vert", "rose"]   | on redemande pour la couleur          |
 
 
 Abel Lopis
 test de la fonction generer_masque
 
-| variable 1 | variable 2 | Résultat attendu   | Résultat observé   |
-|------------|------------|--------------------|--------------------|
-|            |            |                    |                    |
-|            |            |                    |                    |
+| # | Entré utilisateur simulé          | Résultat attendu                    | explication                           | 
+|---|-----------------------------------|-------------------------------------|---------------------------------------|
+| 1 | rose, bleu, jaune, vert           | ["rose", "bleu", "jaune", "vert"]   | couleurs enregistrées dans la liste   |
+| 2 | zebre -> rouge, bleu, vert, jaune | ["rouge", "bleu", "vert", "jaune"]  | on redemande pour la couleur          |
+| 3 | bleu, rouge, bleu, blanc          | ["rouge", "rouge", "bleu", "blanc"] | la couleur est enregistrer 2 fois     |
+| 4 | BLEU, vert, jaUne, Rouge          | ["bleu", "vert", "jaune", "rouge"]  | il y a la fonction lower              |
+| 5 | gris, , orange, bleu              | ["gris", ...?, "orange", "bleu"]    | on demande pour la couleur qui manque |
+| 6 | bateau ->bleu, jaune, vert, rose  | ["bleu", "jaune", "vert", "rose"]   | on redemande pour la couleur          |
